@@ -1,25 +1,31 @@
+/* Apply Quicksand font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap');
+
+/* Body and General Styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f8e1e7;
+    font-family: 'Quicksand', sans-serif; /* Elegant font */
+    background-color: #fce4ec; /* Light pink background */
     color: #333;
     margin: 0;
     padding: 0;
+    line-height: 1.6;
+    padding-top: 80px; /* Adjust for fixed header */
 }
 
 header {
-    background-color: #f06292;
-    padding: 20px;
-    text-align: center;
-}
-
-h1 {
-    margin: 0;
-    color: #fff;
+    background-color: #f8bbd0; /* Soft pink */
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
+    text-align: center;
 }
 
 nav ul li {
@@ -28,24 +34,164 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: white;
     text-decoration: none;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    font-weight: 500;
 }
 
 nav ul li a:hover {
     text-decoration: underline;
+    color: #ffe1f2; /* Lighter pink hover */
 }
 
-main {
-    padding: 20px;
+/* Hero Section */
+.hero-section {
+    height: 100vh; /* Full screen height */
+    background: linear-gradient(135deg, #f8bbd0, #f06292); /* Gradient from light to dark pink */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 80px; /* Adjust for fixed header */
+    border-bottom: 4px solid #f06292; /* Adds a soft border */
+    position: relative;
+}
+
+.hero-content {
+    max-width: 900px;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.hero-section h1 {
+    font-size: 4em;
+    margin: 0;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.hero-section p {
+    font-size: 1.5em;
+    margin-top: 20px;
+    font-weight: 300;
+}
+
+.cta-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 25px;
+    font-size: 1.2em;
+    background-color: #f06292; /* Soft pink */
+    color: white;
+    text-decoration: none;
+    border-radius: 50px; /* Rounded button edges */
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.cta-btn:hover {
+    background-color: #f48fb1; /* Slightly darker pink */
+    transform: scale(1.05); /* Slight scaling effect on hover */
+}
+
+/* Accent Block Section */
+.content-box {
+    background-color: #fef2e8; /* Cream-colored background for contrast */
+    padding: 30px;
+    margin: 30px auto;
+    max-width: 900px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.content-box p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+/* Styling for Download Resume Button */
+.download-btn {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 1.4em;
+    background-color: #f06292; /* Soft pink background */
+    color: white;
+    text-decoration: none;
+    border-radius: 50px; /* Rounded edges */
+    text-align: center;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.download-btn:hover {
+    background-color: #f48fb1; /* Slightly darker pink on hover */
+    transform: scale(1.05); /* Slight scaling effect on hover */
 }
 
 footer {
-    background-color: #f06292;
+    background-color: #f8bbd0;
     color: #fff;
     text-align: center;
     padding: 10px 0;
     position: relative;
     bottom: 0;
     width: 100%;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Soft Shadows for Clean Look */
+section {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin: 30px 0;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #f06292; /* Soft border for sections */
+}
+
+/* Styling Links */
+a {
+    color: #f06292;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+/* Styling for Project Button */
+.project-btn {
+    display: inline-block;
+    padding: 12px 20px;
+    font-size: 1.2em;
+    background-color: #f06292; /* Soft pink background */
+    color: white;
+    text-decoration: none;
+    border-radius: 50px; /* Rounded edges */
+    text-align: center;
+    font-weight: 600;
+    margin-top: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.project-btn:hover {
+    background-color: #f48fb1; /* Slightly darker pink on hover */
+    transform: scale(1.05); /* Slight scaling effect on hover */
+}
+/* Styling for Project Image */
+.project-image {
+    width: 100%; /* Make the image take up the full width of the container */
+    max-width: 800px; /* Limit the maximum width to 800px */
+    margin: 20px 0; /* Add some space around the image */
+    border-radius: 10px; /* Optional: rounded corners for the image */
+    display: block; /* Ensures the image is displayed as a block element */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: soft shadow around the image */
+}
+.project-image {
+    width: 50%; /* Make the image take up the full width of the container */
+    max-width: 800px; /* Limit the maximum width to 800px */
+    margin: 20px 0; /* Add some space around the image */
+    border-radius: 10px; /* Optional: rounded corners for the image */
+    display: block; /* Ensures the image is displayed as a block element */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: soft shadow around the image */
 }
