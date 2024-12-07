@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-scale, initial-scale=1.0">
     <title>Projects | Saanjhh Varyani</title>
     <link rel="stylesheet" href="portfolio.css">
+    <!-- Add Font Awesome for arrow icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -21,23 +23,66 @@
 
     <main>
         <h2>Projects</h2>
-        
-        <!-- Example Project Block -->
+
+        <!-- Project 1 -->
         <section class="project">
             <div class="content-box">
                 <h3>WanderSync: A Collaborative Travel Management System Showcase</h3>
-                <!-- Adding the project image -->
-                <img src="portfoliopictures/wandersync.png" alt="WanderSync" class="project-image">
-
+                <img src="portfoliopictures/wandersync.png" alt="WanderSync" class="project-image2">
                 <p>• Aimed to simplify travel planning by enabling real-time collaboration and organization of itineraries</p>
                 <p>• Implemented a series of design patterns and methodologies including Agile, Scrum, SOLID/GRASP, and more</p>
                 <p>• Through iterative development across multiple sprints, we successfully implemented key features such as itinerary management, real-time updates, and collaborative tools, resulting in a robust and user-friendly application</p>
-                
-                <!-- Adding the button link to the project -->
                 <a href="https://lnkd.in/epTrZ-_u" class="project-btn" target="_blank">View Project</a>
             </div>
         </section>
-        
+
+        <!-- Project 2 -->
+        <section class="project">
+            <div class="content-box">
+                <h3>Raising Awareness for Food Insecurity</h3>
+                <img src="portfoliopictures/fafiimage.png" alt="Fafi" class="project-image">
+                <p>• Developed a multimedia presentation regarding social media marketing strategies to increase hunger crisis awareness</p>
+                <p>• Campaigned through social media platforms for local food banks, amplifying support for food insecurity initiatives</p>
+                <p>• Collaborated with local nonprofit food banks, Meals by Grace and The Place of Forsyth, in order to gain the most reach</p>
+                <p>• Developed campaign on three media platforms: Instagram, TikTok, and Facebook</p>
+                <a href="https://www.canva.com/design/DAGYefecL6M/ICqxmP__bILl9RMmlvn91w/view?utm_content=DAGYefecL6M&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=he8184530a7" class="project-btn" target="_blank">View Project</a>
+            </div>
+        </section>
+
+        <!-- Project 3 -->
+        <section class="project">
+            <div class="content-box">
+                <h3>Virtual Reality Cinema Speculative Design</h3>
+                <img src="portfoliopictures/vrcinemaimage.png" alt="VR Cinema Image" class="project-image">
+                <p>• Formulated a multimedia presentation speculating the future of cinema and media in the late 21st century</p>
+                <p>• Utilized Aframe platform to model a possible speculation of a Virtual Reality Cinema containing theater, ticket box, and concessions</p>
+                <a href="https://www.canva.com/design/DAGYHaa5fGc/oABEP7DnVKtTedczmINrmQ/view?utm_content=DAGYHaa5fGc&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hd380bbbf43" class="project-btn" target="_blank">View Project</a>
+            </div>
+        </section>
+
+        <!-- Project 4 -->
+        <section class="project">
+            <div class="content-box">
+                <h3>Horror Movie Chatbot</h3>
+                <img src="portfoliopictures/horrormovieimage.png" alt="Chatbot Image" class="project-image">
+                <p>• Deviced OpenAI API to create a horror movie suggestor chatbot *requires an API Key*</p>
+                <p>• Augmented the spooky, interactive chatbot experience through animations and unique artistic figures through SVG</p>
+                <a href="https://sona-s21.github.io/lmc_chatbot/" class="project-btn" target="_blank">View Project</a>
+            </div>
+        </section>
+
+        <!-- Project 5 -->
+        <section class="project">
+            <div class="content-box">
+                <h3>Aframe Corners Cafe Model</h3>
+                <img src="portfoliopictures/aframeimage.png" alt="Aframe Cafe Image" class="project-image">
+                <p>• Utilized Aframe platform to formulate a 3-dimensional model of an aesthetic Cafe</p>
+                <p>• Sourced various texture packages and inspiration photos to model two stools, a large plant, and a table</p>
+                <a href="https://adi2781.github.io/aframe_corner/" class="project-btn" target="_blank">View Project</a>
+            </div>
+        </section>
+
+        <!-- Project 6 -->
         <section class="project">
             <div class="content-box">
                 <h3>Increasing Recruitment among FBLA Chapters</h3>
@@ -53,7 +98,7 @@
             </div>
         </section>
 
-
+        <!-- Project 7 -->
         <section class="project">
             <div class="content-box">
                 <h3>Dog Breed Temperament Analyzer</h3>
@@ -61,13 +106,61 @@
                 <p>• Engineered an intuitive interface with JavaFX, creating a seamless user experience to display breed images and traits</p>
             </div>
         </section>
-        
-        <!-- Repeat for more projects -->
+
+        <!-- Navigation Buttons -->
+        <div class="project-btns">
+            <button class="prev-project" disabled><i class="fas fa-chevron-left"></i></button>
+            <button class="next-project"><i class="fas fa-chevron-right"></i></button>
+        </div>
     </main>
 
     <footer>
         <p>© 2024 My Portfolio</p>
     </footer>
+
+    <script>
+        const projects = document.querySelectorAll('.project');
+        const nextButton = document.querySelector('.next-project');
+        const prevButton = document.querySelector('.prev-project');
+
+        let currentIndex = 0;
+
+        // Set initial state
+        projects.forEach((project, index) => {
+            if (index !== currentIndex) {
+                project.style.display = 'none';  // Hide all projects except the first
+            }
+        });
+
+        function updateButtons() {
+            prevButton.disabled = currentIndex === 0;
+            nextButton.disabled = currentIndex === projects.length - 1;
+        }
+
+        nextButton.addEventListener('click', () => {
+            if (currentIndex < projects.length - 1) {
+                projects[currentIndex].style.display = 'none';
+                currentIndex++;
+                projects[currentIndex].style.display = 'block';
+                updateButtons();
+            }
+        });
+
+        prevButton.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                projects[currentIndex].style.display = 'none';
+                currentIndex--;
+                projects[currentIndex].style.display = 'block';
+                updateButtons();
+            }
+        });
+
+        updateButtons();
+    </script>
+
 </body>
 </html>
+
+
+
 

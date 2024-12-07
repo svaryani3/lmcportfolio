@@ -5,6 +5,75 @@
     <meta name="viewport" content="width=device-scale, initial-scale=1.0">
     <title>Resume - Saanjhh Varyani</title>
     <link rel="stylesheet" href="portfolio.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-scale, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <style>
+        /* Add more customization in-line if needed */
+        .bow {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background-color: #f06292;
+            border-radius: 50%;
+            position: relative;
+            margin-top: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .bow:before,
+        .bow:after {
+            content: "";
+            position: absolute;
+            background-color: #f06292;
+            width: 16px;
+            height: 6px;
+            border-radius: 50%;
+        }
+
+        .bow:before {
+            top: 0;
+            left: -9px;
+            transform: rotate(-45deg);
+        }
+
+        .bow:after {
+            bottom: 0;
+            right: -9px;
+            transform: rotate(45deg);
+        }
+
+        .hero-section h1,
+        .aboutme h2,
+        .projects h2 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .project-btn,
+        .cta-btn,
+        .download-btn {
+            border-radius: 20px;
+            font-weight: 600;
+            padding: 15px 30px;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: transform 0.3s, background-color 0.3s ease;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .cta-btn:hover,
+        .project-btn:hover,
+        .download-btn:hover {
+            transform: scale(1.1);
+            background-color: #f48fb1;
+        }
+
+        .project {
+            margin-bottom: 40px;
+        }
+    </style>
 </head>
 <body>
     <header>
